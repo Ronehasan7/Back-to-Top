@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Text Box Auto Completion </title>
+		
+		<style>
+			.container {
+				width: 500px;
+				min-height: 300px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-shadow: 0px 0px 10px #ccc;
+				border-radius: 4px;
+				flex-direction: column;
+			}
+			.container form{
+				width: 300px;
+			}
+			label {
+				display: inline-block;
+				max-width: 100%;
+				margin-bottom: 10px;
+				font-weight: 700;
+			}
+			#country {
+				display: block;
+				width: 100%;
+				height: auto;
+				padding: 6px 12px;
+				font-size: 14px;
+				border-radius: 4px;
+				border: 1px solid #ccc;
+				width: 275px;
+			}
+			ul#autocomplete-results{
+				margin: 0;
+				padding-left: 0px;
+				width: 300px;
+			}
+			ul#autocomplete-results li{
+				list-style: none;
+				padding: 5px;
+				border: 1px solid #f1f1f1;
+				border-radius: 4px;
+			}
+			li.result.highlighted{
+				background-color: #eaeaea;
+			}
+			/*#autocomplete-results li {
+				display: none;
+			}
+			ul#autocomplete-results.visible li {
+			display: block;
+			}*/
+		</style>
+
+	</head>
+	<body>
+		<div class="container">
+			<form action="" >
+				<label for="country"> Please enter your Country </label>
+				<input type="text" id="country" name="country" placeholder="Type Here" >
+				
+			</form>
+			
+			<ul id="autocomplete-results"></ul>
+		</div>
+		
+		
+		<script src="script.js"></script>
+	</body>
+</html>
